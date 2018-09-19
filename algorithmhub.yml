@@ -1,0 +1,17 @@
+version: 1
+
+builds:
+    default:
+        docker: 
+            image: algorithmhub/ahws-ipython3:latest
+        working_directory: /workspace/example-build
+        steps:
+            - checkout
+            - run: echo Build 1 Done
+    second:
+        docker: 
+            image: algorithmhub/ahws-ipython3:latest
+        working_directory: /workspace/example-build
+        steps:
+            - checkout
+            - run: echo Build 2 Done
